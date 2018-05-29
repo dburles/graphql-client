@@ -12,7 +12,7 @@
 
 `requestOptionsOverride` (optional)
 
-### Instance methods
+### API
 
 `fetch` [function] Returns a promise, takes an optional object containing `variables` field.
 
@@ -72,7 +72,7 @@ myQuery.fetch().then(data => console.log(data));
 
 `requestOptionsOverride` (optional)
 
-### Instance methods
+### API
 
 `fetch` [function] Returns a promise, takes an optional object containing `variables` field.
 
