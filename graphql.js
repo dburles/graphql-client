@@ -17,6 +17,9 @@ export const GraphQLQuery = ({
 }) => {
   let _cache = {};
   let _variables = null;
+  const _subscriptions = [];
+
+  const emit = () => _subscriptions.forEach(subscription => subscription());
 
   const fetcher = (
     userOptions = defaultFetchUserOptions,
@@ -40,6 +43,7 @@ export const GraphQLQuery = ({
         if (cache && !options.fetchMore) {
           _cache = data;
         }
+        emit();
         return data;
       });
   };
@@ -48,6 +52,7 @@ export const GraphQLQuery = ({
     ...(cache && {
       setCache: cb => {
         _cache = { data: cb(_cache.data) };
+        emit();
       },
       getCache: () => _cache,
     }),
@@ -68,6 +73,10 @@ export const GraphQLQuery = ({
         throw Error('Cannot call `fetchMore` without cache');
       }
       return fetcher(userOptions, { fetchMore: true });
+    },
+    subscribe: callback => {
+      _subscriptions.push(callback);
+      return () => _subscriptions.splice(_subscriptions.indexOf(callback), 1);
     },
     options: {
       url,
