@@ -14,7 +14,7 @@
 
 ### API
 
-`fetch` [function] Returns a promise, takes an optional object containing `variables` field.
+`fetch` [function] Returns a promise. Takes an optional object containing a `variables` field.
 
 ```js
 myQuery.fetch({ variables: { id: '1' } });
@@ -74,7 +74,7 @@ myQuery.fetch().then(data => console.log(data));
 
 ### API
 
-`fetch` [function] Returns a promise, takes an optional object containing `variables` field.
+`fetch` [function] Returns a promise. Takes an optional object containing a `variables` field.
 
 ```js
 myQuery.fetch({ variables: { id: '1' } });
