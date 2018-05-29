@@ -1,5 +1,17 @@
 # A GraphQL Client
 
+> Why? 
+
+It should be easy to manipulate a GraphQL cache.
+
+> How does the cache work?
+
+A cache is maintained within each `GraphQLQuery` and is unique to the variables provided. 
+
+> How does the cache work?
+
+Internally that's all the cache does. The `setCache` function allows the cache to be manipulated. Once you have updated the cache with `setCache`, calling `fetch` (with the same variables) will return the updated cache.
+
 ## GraphQLQuery
 
 ### Options
