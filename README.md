@@ -3,9 +3,13 @@
 ## GraphQLQuery
 
 `url` (optional) defaults to `/graphql`
+
 `query` GraphQL query
+
 `cache` (optional) defaults to `false`
+
 `requestOptionsOverride` (optional)
+
 
 #### Example:
 
@@ -37,7 +41,9 @@ myQuery.fetch().then(data => console.log(data));
 ## GraphQLMutation
 
 `url` (optional) defaults to `/graphql`
+
 `query` GraphQL query
+
 `requestOptionsOverride` (optional)
 
 #### Example:
