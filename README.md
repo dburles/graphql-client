@@ -2,7 +2,7 @@
 
 ## GraphQLQuery
 
-*Options*
+### Options
 
 `url` (optional) defaults to `/graphql`
 
@@ -12,7 +12,7 @@
 
 `requestOptionsOverride` (optional)
 
-*Instance methods*
+### Instance methods
 
 `fetch` [function] Returns a promise, takes an optional object containing `variables` field.
 
@@ -64,7 +64,7 @@ myQuery.fetch().then(data => console.log(data));
 
 ## GraphQLMutation
 
-*Options*
+### Options
 
 `url` (optional) defaults to `/graphql`
 
@@ -72,7 +72,7 @@ myQuery.fetch().then(data => console.log(data));
 
 `requestOptionsOverride` (optional)
 
-*Instance methods*
+### Instance methods
 
 `fetch` [function] Returns a promise, takes an optional object containing `variables` field.
 
