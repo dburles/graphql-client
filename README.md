@@ -87,11 +87,10 @@ myQuery.fetch({ variables: { id: '1' } });
 ```js
 import { GraphQLQuery } from './graphql.js';
 
-const myMutation = GraphQLQuery({
+const myMutation = GraphQLMutation({
   url: '...',
   query: `...`,
-  cache: true,
 });
 
-myMutation.fetch().then(data => console.log(data));
+myMutation.fetch({ variables: { title: 'New title' } }).then(data => console.log(data));
 ```
