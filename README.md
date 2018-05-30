@@ -12,7 +12,7 @@ A cache is maintained within each `GraphQLQuery` and is unique to the variables 
 
 Internally that's all the cache does. The `setCache` function allows the cache to be manipulated. Once you have updated the cache with `setCache`, calling `fetch` (with the same variables) will return the updated cache.
 
-> Can I use it with React
+> Can I use it with React?
 
 Yes, here's a `Query` component https://gist.github.com/dburles/253a25366365232298d34b03b13f316f
 
