@@ -35,7 +35,6 @@ myQuery.fetch({ variables: { id: '1' } });
 `setCache` [function] Used to mutate the cache
 
 ```js
-// Example
 myQuery.setCache(cache => ({ items: [...cache.items, { id: '2', title: 'new' }] }));
 ```
 
@@ -44,6 +43,14 @@ myQuery.setCache(cache => ({ items: [...cache.items, { id: '2', title: 'new' }] 
 `refetch` [function] Requests previous request from the server
 
 `fetchMore` [function] Fetch more data without affecting existing cache
+
+`subscribe` [function] Subscribe to cache updates. Returns a function that when called, unsubscribes.
+
+```js
+const sub = myQuery.subscribe(() => console.log('hi'));
+// unsubscribe
+sub();
+```
 
 `options` The options passed in
 
